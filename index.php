@@ -16,12 +16,17 @@ $agenda = get_agenda($emp_id);
     <h2>Activité de l'employé <?php echo $emp_data['emp_name'] ?> </h2>
 	<div id="agenda">
 		<table>
-			<tr><th>Heure</th><th>Activité</th></tr>	
+			<tr><th>Heure</th><th>Activité</th></tr>
+
 <?php
 // TODO: Afficher l'agenda de l'employé
+foreach ($agenda as $heure => $activité ) {
+	echo '<tr><th>',$heure ,'</th><th>' , $activité , '</th></tr>';
+}
+echo   $emp_data['emp_name'] ;
 ?>
 		</table>
 	</div>
-    <?php require_once('view_bloc/_view_footer.php') ?>
+    <?php require_once('view_bloc/_view_footer.php')?>;
 </body>
 </html>
