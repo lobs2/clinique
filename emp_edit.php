@@ -24,7 +24,27 @@ $agenda = get_agenda($emp_id);
             echo '<tr><th>',$heure ,'</th><th>' , $activité , '</th></tr>';
         }
         echo   $emp_data['emp_name'] ;
+
         ?>
+
+        <label for="08H"> 08H : <select name="selection" id="08H">
+                <option>Planification</option>
+                <label for="09H"> 09H : <select name="selection" id="09H">
+                <option>Planification</option>
+                        <label for="10H"> 10H : <select name="selection" id="10H">
+                                <option>Réunion Médicale</option>
+                                <label for="11H"> 11H : <select name="selection" id="11H">
+                                        <option>Réunion Médicale</option>
+                                        <label for="12H"> 12H : <select name="selection" id="12H">
+                                                <option>Hors</option>
+                                                <label for="13H"> 13H : <select name="selection" id="13H">
+                                                        <option>Formation et conseil</option>
+                                                        <label for="14H"> 14H : <select name="selection" id="14H">
+                                                                <option>Dossiers médicaux</option>
+                                                                <label for="15H">15H : <select name="selection" id="15H">
+                                                                        <option>Dossiers médicaux</option>
+
+
     </table>
 </div>
 <?php require_once('view_bloc/_view_footer.php')?>;
