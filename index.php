@@ -6,6 +6,8 @@ $liste_employes = get_employes(); // Liste des noms de tous les employés
 $emp_data = $liste_employes[$emp_id];
 $agenda = get_agenda($emp_id);
 ?>
+
+
 <html>
 	<head>
         <meta charset = "UTF-8" />
@@ -14,6 +16,7 @@ $agenda = get_agenda($emp_id);
 <body>
     <?php require_once('view_bloc/_view_header.php') ?>
     <h2>Activité de l'employé <?php echo $emp_data['emp_name'] ?> </h2>
+	<a href="emp_edit.php?<?=PARAM_EMP_ID?>=<?=$emp_id?>"><img src="images/crayon.png" alt="crayon"/></a>
 	<div id="agenda">
 		<table>
 			<tr><th>Heure</th><th>Activité</th></tr>
@@ -30,3 +33,7 @@ echo   $emp_data['emp_name'] ;
     <?php require_once('view_bloc/_view_footer.php')?>;
 </body>
 </html>
+
+
+
+
